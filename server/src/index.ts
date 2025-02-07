@@ -7,6 +7,7 @@ import morgan from "morgan";
 
 /* ROUTE IMPORTS */
 import dashboardRoutes from "./routes/dashboardRoutes"
+import productRoutes from "./routes/productRoutes";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(cors());
 
 /* ROUTE */
 app.use("/dashboard", dashboardRoutes) // http://localhost:8000/dashboard
+app.use("/products", productRoutes) // http://localhost:8000/products
 
 app.get("/hello", (req, res) => {
     res.send("hello world");
